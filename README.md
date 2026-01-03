@@ -16,7 +16,8 @@ uvicorn app.main:app --reload
 ```
 
 <br />
-```txt
+
+```
   --------------------------------------------------
   Key Characteristics
   --------------------------------------------------
@@ -29,7 +30,9 @@ uvicorn app.main:app --reload
   - Academic + production-aligned design
   --------------------------------------------------
 ```
+
 # Architecture Overview
+
 Client -> FastAPI Route -> Inference Service -> File Converter -> Image
 Preprocessing -> CNN Prediction -> Structured JSON Response
 
