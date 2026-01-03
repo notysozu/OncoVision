@@ -10,9 +10,6 @@ into CNN-compatible images, and performs inference using a pretrained
 model.
 <br />
 ```bash
- cd ./backend/
-```
-```bash
 uvicorn app.main:app --reload
 ```
 <br />
