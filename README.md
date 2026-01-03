@@ -1,4 +1,5 @@
 # OncoVision API
+
 OncoVision API is a deep learning–based medical image analysis system that detects cancer from medical images (histopathology / X-ray / MRI depending on dataset) using a Convolutional Neural Network (CNN).
 <br />
 OncoVision API is a backend-only academic project that performs cancer
@@ -9,9 +10,11 @@ The system accepts file uploads of multiple types, safely converts them
 into CNN-compatible images, and performs inference using a pretrained
 model.
 <br />
+
 ```bash
 uvicorn app.main:app --reload
 ```
+
 <br />
 ```
   --------------------------------------------------
@@ -41,16 +44,19 @@ are converted into images before inference.
   Others: Rejected
   --------------------------------------------------
 ```
+
 # API Response Format
+
 ```
 {
  “status”: “success”,
  “file_type”: “pdf”,
  “images_processed”: 3,
  “prediction”: “Cancer Detected”,
- “confidence”: 0.87 
+ “confidence”: 0.87
 }
 ```
+
 <img src="https://github.com/notysozu/web-assets/blob/main/OncoVision/flowchart.png?raw=true" alt="Card Image - PC Version" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 5px;">
 <br />
 
