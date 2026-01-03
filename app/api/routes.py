@@ -74,16 +74,24 @@ async def predict(file: UploadFile = File(...)):
             filename=file.filename
         )
 
+        # -----------------------------
+        # Presentation-layer formatting
+        # -----------------------------
+        response = {
+            "status": "success",
+            "file_type": result["file_type"],
+            "images_processed": result["images_processed"],
+            "prediction": result["prediction"],
+            "confidence": round(result["confidence"], 6)
+        }
+
         log.info(
             f"Inference completed | "
-            f"Prediction={result['prediction']} | "
-            f"Confidence={result['confidence']}"
+            f"Prediction={response['prediction']} | "
+            f"Confidence={response['confidence']}"
         )
 
-        return {
-            "status": "success",
-            **result
-        }
+        return response
 
     except UnsupportedFileTypeError as e:
         log.warning(str(e))

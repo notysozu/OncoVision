@@ -11,8 +11,8 @@ class Settings:
     )
 
     IMAGE_SIZE = (
-        int(os.getenv("IMAGE_WIDTH", 224)),
-        int(os.getenv("IMAGE_HEIGHT", 224))
+        int(os.getenv("IMAGE_WIDTH", 128)),
+        int(os.getenv("IMAGE_HEIGHT", 128))
     )
 
     # -----------------------------
