@@ -8,3 +8,4 @@ pdf2image
 python-docx
 python-dotenv
 loguru
+dotenv
